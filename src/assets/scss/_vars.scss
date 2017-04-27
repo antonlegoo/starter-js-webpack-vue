@@ -1,0 +1,135 @@
+//  #######################################################
+//  #   _vars.scss
+//		Variables used throughout SASS files
+//  #######################################################
+
+@import "~breakpoint-sass/stylesheets/breakpoint";
+
+//  #######################################################
+//  #   Paths
+//  #######################################################
+
+$path-images                     	: "../img";
+$path-img                     		: $path-images;
+$path-image-dir                     : $path-images;
+$path-fonts 						: "../fonts/";
+$fa-font-path 						: $path-fonts;
+$icon-font-path 					: $path-fonts;
+
+//	#######################################################
+//	# Breakpoint Size Definitions
+//	#######################################################
+
+// Size for small devices (landscape phones, 576px and up)
+$bp-size-sm 						: 576px;
+// Size for medium devices (tablets, 768px and up)
+$bp-size-md 						: 768px;
+// Size for large devices (desktops, 992px and up)
+$bp-size-lg 						: 992px;
+// Size for extra large devices (large desktops, 1200px and up)
+$bp-size-xl 						: 1200px;
+
+
+//	#######################################################
+//	# Breakpoint Classes
+//	#######################################################
+
+// Extra small devices (portrait phones, less than 576px)
+$bp-xs 								: (max-width: $bp-size-sm - 1px);
+// Small devices (landscape phones, 576px and up)
+$bp-sm 								: (min-width: $bp-size-sm) and (max-width: $bp-size-md - 1px);
+// Medium devices (tablets, 768px and up)
+$bp-md 								: (min-width: $bp-size-md) and (max-width: $bp-size-lg - 1px);
+// Large devices (desktops, 992px and up)
+$bp-lg 								: (min-width: $bp-size-lg) and (max-width: $bp-size-xl - 1px);
+// Extra large devices (large desktops, 1200px and up)
+$bp-xl 								: (min-width: $bp-size-xl);
+
+// Computed for mobile devices
+$bp-mobile							: (max-width: $bp-size-sm - 1px);
+// Computed for tablet devices
+$bp-tablet							: (min-width: $bp-size-sm) and (max-width: $bp-size-lg - 1px);
+// Computed for dekstop
+$bp-desktop							: (min-width: $bp-size-lg);
+
+// A map of the classes (for use in iteration)
+$bp-classes : ( "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
+// $bp-classes : ( "xs" : $bp-xs, "sm" : $bp-sm, "md" : $bp-md, "lg" : $bp-lg, "xl" : $bp-xl, "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
+
+//	#######################################################
+//	# Generic Colors
+//	#######################################################
+
+$color-gray-darkest                 : darken( white, 95% );
+$color-gray-darker                  : darken( white, 80% );
+$color-gray-dark                    : darken( white, 69.8% );
+$color-gray                         : darken( white, 50% );
+$color-gray-medium                 	: darken( white, 40% );
+$color-gray-light                   : darken( white, 32% );
+$color-gray-lighter                 : darken( white, 20% );
+$color-gray-lightest                : darken( white, 5% );
+
+//	#######################################################
+//	# Brand Colors
+//	#######################################################
+
+$color-blue 						: blue;
+$color-red 							: red;
+
+$color-gray-text					: #323232;
+$color-gray-ghost 					: #969696;
+
+//	#######################################################
+//	# Computed Colors
+//	#######################################################
+
+$color-primary                      : $color-blue;
+$color-secondary                    : $color-red;
+
+//	#######################################################
+//	# Typography
+//	#######################################################
+
+$color-text 						: $color-gray-text;
+$color-text-muted					: $color-gray-ghost;
+$color-text-dark					: #000;
+$color-headings 					: #000;
+
+$font-size-root 					: 15px;
+$font-size-base						: 1rem;
+$font-size-large					: 1.35rem;
+$font-size-small					: 0.85rem;
+
+
+$font-size-h1						: 2.8rem;
+$font-size-h2						: 2rem;
+$font-size-h3						: 1.5rem;
+$font-size-h4						: 1.25rem;
+$font-size-h5 						: 1rem;
+$font-size-h6 						: $font-size-small;
+
+$font-global-letter-spacing			: inherit;
+$font-heading-letter-spacing		: $font-global-letter-spacing;
+
+$font-family-sans 					: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-serif 					: serif;
+
+$font-family-base					: $font-family-serif;
+$font-family-btn					: $font-family-sans;
+$font-family-heading				: $font-family-sans;
+
+
+//	#######################################################
+//	# Graphic Colors
+//	#######################################################
+
+$color-body-bg 						: white;
+$color-border						: #171715;
+$color-border-light					: rgb(215, 216, 216);
+
+
+$color-success						: green;
+$color-info							: blue;
+$color-warning						: yellow;
+$color-danger						: red;
+

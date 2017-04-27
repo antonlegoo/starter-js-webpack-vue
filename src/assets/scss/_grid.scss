@@ -1,0 +1,69 @@
+//  #######################################################
+//  #   _grid.scss
+//      The grid system used throughout the site
+//  #######################################################
+
+@import "~susy/sass/susy";
+
+//  #######################################################
+//  #   Vars
+//  #######################################################
+
+
+$susy-container-width       : 960px;        // The width of the container
+$susy-num-columns           : 12;           // The number of columns in your grid
+$susy-gutter-size           : 20px;         // The size of gutters between columns
+
+$susy: (
+	container: $susy-container-width,
+	columns: $susy-num-columns,  
+	gutters: $susy-gutter-size / ( $susy-container-width / $susy-num-columns )
+);
+
+//  #######################################################
+//  #   Main
+//  #######################################################
+
+.container
+{ 
+    @include container; 
+}
+
+//  Create the columns
+
+@for $i from 1 through $susy-num-columns
+{
+    // Create each column
+    .col-#{$i}
+    {
+        float: left;
+        width: span($i);
+        padding-left: gutter() / 2;
+        padding-right: gutter() / 2;
+    }
+
+    // Create each column offset
+    .col-offset-#{$i}
+    { 
+        margin-left: span($i);
+    }
+}
+
+
+// Create responsive classes for each column
+@each $key, $value in $bp-classes
+{
+    @include breakpoint( $value )
+    {
+        @for $i from 1 through $susy-num-columns
+        {
+            .col-#{$key}-#{$i}
+            {
+                float: left;
+                width: span($i);
+                padding-left: gutter() / 2;
+                padding-right: gutter() / 2;
+            }
+        }
+    }
+}

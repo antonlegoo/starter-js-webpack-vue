@@ -1,0 +1,146 @@
+//  #######################################################
+//  #   _utils.scss
+//		Single purpose utitlity classes
+//  #######################################################
+
+$size-pad 			: 20px;
+
+//  #######################################################
+//  #   Padding
+//  #######################################################
+
+// No padding
+.pad--none			{ padding: 0 !important; }
+.pad--none-v		{ padding-top: 0 !important; padding-bottom: 0 !important; }
+.pad--none-h		{ padding-left: 0 !important; padding-right: 0 !important; }
+
+// Full padding
+
+.pad 				{ padding: $size-pad; }
+.pad--top 			{ padding-top: $size-pad; }
+.pad--bottom 		{ padding-bottom: $size-pad; }
+.pad--left 			{ padding-left: $size-pad; }
+.pad--right 		{ padding-right: $size-pad; }
+.pad--v				{ padding-top: $size-pad; 		padding-bottom: $size-pad; }
+.pad--h				{ padding-left: $size-pad;		padding-right: $size-pad; }
+
+// Half padding
+
+.pad-h 				{ padding: $size-pad / 2; }
+.pad--top-h 		{ padding-top: $size-pad / 2; }
+.pad--bottom-h 		{ padding-bottom: $size-pad / 2; }
+.pad--left-h 		{ padding-left: $size-pad / 2; }
+.pad--right-h 		{ padding-right: $size-pad / 2; }
+.pad--v-h			{ padding-top: $size-pad / 2; 	padding-bottom: $size-pad / 2; }
+.pad--h-h			{ padding-left: $size-pad / 2; 	padding-right: $size-pad / 2; }
+
+// Double padding
+
+.pad-2 				{ padding: $size-pad * 2; }
+.pad--top-2 		{ padding-top: $size-pad * 2; }
+.pad--bottom-2 		{ padding-bottom: $size-pad * 2; }
+.pad--left-2 		{ padding-left: $size-pad * 2; }
+.pad--right-2 		{ padding-right: $size-pad * 2; }
+.pad--v-2			{ padding-top: $size-pad * 2; 	padding-bottom: $size-pad * 2; }
+.pad--h-2			{ padding-left: $size-pad * 2; 	padding-right: $size-pad * 2; }
+
+
+// 4 padding
+
+.pad-4 				{ padding: $size-pad * 4; }
+.pad--top-4 		{ padding-top: $size-pad * 4; }
+.pad--bottom-4 		{ padding-bottom: $size-pad * 4; }
+.pad--left-4 		{ padding-left: $size-pad * 4; }
+.pad--right-4 		{ padding-right: $size-pad * 4; }
+.pad--v-4			{ padding-top: $size-pad * 4; 	padding-bottom: $size-pad * 4; }
+.pad--h-4			{ padding-left: $size-pad * 4; 	padding-right: $size-pad * 4; }
+
+
+
+//  #######################################################
+//  #   Disaply
+//  #######################################################
+
+.h-display-block		{ display: block !important; }
+.h-display-inline-block	{ display: inline-block !important; }
+.h-display-inline		{ display: inline !important; }
+
+.h-pos-fixed			{ position: fixed !important; }
+
+//  #######################################################
+//  #   Text
+//  #######################################################
+
+.h-font-heading { font-family: $font-family-heading; }
+.h-font-serif  	{ font-family: $font-family-serif; }
+
+.h-text-small  	{ font-size: $font-size-small; }
+.h-text-muted  	{ color: $color-text-muted; }
+
+.h-text-left 	{ text-align: left; }
+.h-text-center 	{ text-align: center; }
+.h-text-right 	{ text-align: right; }
+
+.h-text-bold 	{ font-weight: 700; }
+.h-text-italic 	{ font-style: italic; }
+
+.h-text-uppercase	{ text-transform: uppercase; }
+.h-text-lowercase	{ text-transform: lowercase; }
+.h-text-capitalize	{ text-transform: capitalize; }
+
+
+.h-color-primary
+{
+	color: $color-primary;
+}
+
+.h-color-headings
+{
+	color: $color-headings;
+}
+
+.h-color-text
+{
+	color: $color-text;
+}
+
+.h-text-truncate
+{
+	// Note: width must be set on case by case basis
+	
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+//  #######################################################
+//  #   Images
+//  #######################################################
+
+.h-image-fit-container
+{
+	max-width: 100%;
+}
+
+//  #######################################################
+//  #   Mixins
+//  #######################################################
+
+// Handles browser prefixes for transform
+@mixin transform( $rule )
+{
+	transform: $rule;
+	-webkit-transform: $rule;
+	-moz-transform: $rule;
+	-ms-transform: $rule;
+}
+
+// Prints all CSS rules from a map
+@mixin print($map)
+{
+	@each $key, $value in $map
+	{
+		#{$key} : $value;
+	}
+}
