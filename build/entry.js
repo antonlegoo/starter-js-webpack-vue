@@ -17,4 +17,4 @@ require( "../src/app/main.js" );
 require( "../src/assets/scss/index.scss" );
 
 // Import all images
-require.context( "../src/assets/img/", true, /^.*\.*$/);
+require.context( "../src/assets/img/", true, /\.(png|jpe?g|gif|svg)(\?.*)?$/ );
