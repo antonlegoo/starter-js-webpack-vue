@@ -1,4 +1,3 @@
-// var glob = require( "glob" );
 
 // ********************************************************
 //	#	entry.js
@@ -18,4 +17,4 @@ require( "../src/app/main.js" );
 require( "../src/assets/scss/index.scss" );
 
 // Import all images
-var req = require.context( "../src/assets/img/", true, /^.*\.*$/);
+require.context( "../src/assets/img/", true, /^.*\.*$/);

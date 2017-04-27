@@ -14,7 +14,6 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "css-loader": "^0.28.0",
-    "ejs-loader": "^0.3.0",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
