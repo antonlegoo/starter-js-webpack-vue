@@ -1,6 +1,6 @@
-# starter-js-webpack
+# starter-js-webpack-vue
 
-Simple boilerplate for building a website using Webpack for tooling.
+Simple boilerplate for building a website using VueJS with Webpack for tooling.
 
 ### Installation
 
@@ -14,4 +14,5 @@ Run `npm install`.
 
 ### Links
 
+* [VueJS](https://vuejs.org/)
 * [Webpack Documentation](https://webpack.js.org/configuration/)
