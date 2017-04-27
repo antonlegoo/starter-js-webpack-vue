@@ -8,9 +8,9 @@ Run `npm install`.
 
 ### Usage
 
-* Add your entry points to [entry.js](./build/entry.js).
+* Add your entry points to [./build/entry.js](./build/entry.js).
 * `npm run dev` will run a dev server with hot reloading.
-* `npm run build` will build to the directory specified in [config.js](./build/config.js).
+* `npm run build` will build to the directory specified in [./build/config.js](./build/config.js).
 
 ### Links
 
