@@ -4,8 +4,8 @@ Simple boilerplate for building a website using Webpack for tooling.
 
 You can find more specific uses in these other branches
 
-* [VueJS](./tree/vuejs)
-* [Backbone](./tree/backbone)
+* [VueJS](../../tree/vuejs)
+* [Backbone](../../tree/backbone)
 
 ### Installation
 
