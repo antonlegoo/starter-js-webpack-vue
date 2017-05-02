@@ -32,5 +32,13 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0"
+  },
+  "babel": {
+    "presets": ["env"]
   }
 }
