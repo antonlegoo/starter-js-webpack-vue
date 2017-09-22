@@ -37,8 +37,7 @@ module.exports =
                 options:
                 {
                     limit: 1,
-                    // The following preserves the folder structure of images relative to their place in "../src/assets/img"
-                    name: function( p ){ return "img/" + p.replace( path.resolve( __dirname, "../src/assets/img" ), "" ); },
+                    name: "images/[name].[ext]"
                 }
             },
             {

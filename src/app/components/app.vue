@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <img src="images/green-left.png">
         <main-header></main-header>
         <main-content></main-content>
         <main-footer></main-footer>
@@ -10,9 +11,9 @@
 
 <script>
 
-import header from "./components/main-header.vue";
-import content from "./components/main-content.vue";
-import footer from "./components/main-footer.vue";
+import header from "./main-header.vue";
+import content from "./main-content.vue";
+import footer from "./main-footer.vue";
 
 export default
 {
@@ -20,12 +21,12 @@ export default
 	{
 		return {}
 	},
-    components: 
+    "components": 
     {
         "main-header"   : header,
         "main-content"  : content,
         "main-footer"   : footer,
-    }
+    },
 }
 </script>
 
