@@ -17,46 +17,6 @@ $fa-font-path 						: $path-fonts;
 $icon-font-path 					: $path-fonts;
 
 //	#######################################################
-//	# Breakpoint Size Definitions
-//	#######################################################
-
-// Size for small devices (landscape phones, 576px and up)
-$bp-size-sm 						: 576px;
-// Size for medium devices (tablets, 768px and up)
-$bp-size-md 						: 768px;
-// Size for large devices (desktops, 992px and up)
-$bp-size-lg 						: 992px;
-// Size for extra large devices (large desktops, 1200px and up)
-$bp-size-xl 						: 1200px;
-
-
-//	#######################################################
-//	# Breakpoint Classes
-//	#######################################################
-
-// Extra small devices (portrait phones, less than 576px)
-$bp-xs 								: (max-width: $bp-size-sm - 1px);
-// Small devices (landscape phones, 576px and up)
-$bp-sm 								: (min-width: $bp-size-sm) and (max-width: $bp-size-md - 1px);
-// Medium devices (tablets, 768px and up)
-$bp-md 								: (min-width: $bp-size-md) and (max-width: $bp-size-lg - 1px);
-// Large devices (desktops, 992px and up)
-$bp-lg 								: (min-width: $bp-size-lg) and (max-width: $bp-size-xl - 1px);
-// Extra large devices (large desktops, 1200px and up)
-$bp-xl 								: (min-width: $bp-size-xl);
-
-// Computed for mobile devices
-$bp-mobile							: (max-width: $bp-size-sm - 1px);
-// Computed for tablet devices
-$bp-tablet							: (min-width: $bp-size-sm) and (max-width: $bp-size-lg - 1px);
-// Computed for dekstop
-$bp-desktop							: (min-width: $bp-size-lg);
-
-// A map of the classes (for use in iteration)
-$bp-classes : ( "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
-// $bp-classes : ( "xs" : $bp-xs, "sm" : $bp-sm, "md" : $bp-md, "lg" : $bp-lg, "xl" : $bp-xl, "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
-
-//	#######################################################
 //	# Generic Colors
 //	#######################################################
 
@@ -118,6 +78,10 @@ $font-family-base					: $font-family-serif;
 $font-family-btn					: $font-family-sans;
 $font-family-heading				: $font-family-sans;
 
+$font-weight-normal					: 400;
+$font-weight-semi					: 600;
+$font-weight-bold					: 900;
+
 
 //	#######################################################
 //	# Graphic Colors
@@ -132,4 +96,61 @@ $color-success						: green;
 $color-info							: blue;
 $color-warning						: yellow;
 $color-danger						: red;
+
+
+//	#######################################################
+//	# Units
+//	#######################################################
+
+$size-pad 			: 10px;
+
+
+//	#######################################################
+//	# Grid
+//	#######################################################
+
+$grid-container-width       : 1024px;        // The width of the container
+$grid-num-columns           : 12;           // The number of columns in your grid
+$grid-gutter-size           : 20px;         // The size of gutters between columns
+
+
+//	#######################################################
+//	# Breakpoint Size Definitions
+//	#######################################################
+
+// Size for small devices (landscape phones, 576px and up)
+$bp-size-sm 						: 576px;
+// Size for medium devices (tablets, 768px and up)
+$bp-size-md 						: 768px;
+// Size for large devices (desktops, 992px and up)
+$bp-size-lg 						: 992px;
+// Size for extra large devices (large desktops, 1200px and up)
+$bp-size-xl 						: 1200px;
+
+
+//	#######################################################
+//	# Breakpoint Classes
+//	#######################################################
+
+// Extra small devices (portrait phones, less than 576px)
+$bp-xs 								: (max-width: $bp-size-sm - 1px);
+// Small devices (landscape phones, 576px and up)
+$bp-sm 								: (min-width: $bp-size-sm) and (max-width: $bp-size-md - 1px);
+// Medium devices (tablets, 768px and up)
+$bp-md 								: (min-width: $bp-size-md) and (max-width: $bp-size-lg - 1px);
+// Large devices (desktops, 992px and up)
+$bp-lg 								: (min-width: $bp-size-lg) and (max-width: $bp-size-xl - 1px);
+// Extra large devices (large desktops, 1200px and up)
+$bp-xl 								: (min-width: $bp-size-xl);
+
+// Computed for mobile devices
+$bp-mobile							: (max-width: $bp-size-sm - 1px);
+// Computed for tablet devices
+$bp-tablet							: (min-width: $bp-size-sm) and (max-width: $bp-size-lg - 1px);
+// Computed for dekstop
+$bp-desktop							: (min-width: $bp-size-lg);
+
+// A map of the classes (for use in iteration)
+$bp-classes : ( "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
+// $bp-classes : ( "xs" : $bp-xs, "sm" : $bp-sm, "md" : $bp-md, "lg" : $bp-lg, "xl" : $bp-xl, "mobile" : $bp-mobile, "tablet" : $bp-tablet, "desktop" : $bp-desktop );
 

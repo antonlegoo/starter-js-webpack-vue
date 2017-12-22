@@ -7,6 +7,7 @@
     "start": "node build/dev.js",
     "dev": "node build/dev.js",
     "build": "node build/build.js",
+    "compress": "node build/compress-images.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -25,9 +26,29 @@
     "style-loader": "^0.16.1",
     "susy": "^2.2.12",
     "url-loader": "^0.5.8",
+    "vue": "^2.2.6",
+    "vue-loader": "^12.0.0",
+    "vue-router": "^2.7.0",
+    "vue-template-compiler": "^2.2.6",
+    "vuex": "^2.4.0",
     "webpack": "^2.4.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "imagemin": "^5.3.1",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^6.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }

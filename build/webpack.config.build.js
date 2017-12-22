@@ -37,7 +37,7 @@ module.exports = merge( webpackBaseConfig,
     },
     plugins:
     [
-        new ExtractTextPlugin( "css/styles.css" ),
+        new ExtractTextPlugin( "styles.css" ),
     ]
 }
 );

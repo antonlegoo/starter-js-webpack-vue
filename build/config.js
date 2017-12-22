@@ -10,7 +10,7 @@ module.exports =
 {
 	build: 
 	{
-		PORT			: null,
+		PORT			: 8080,
 		OUTPUT_DIR 		: path.resolve(__dirname, '../dist')
 	},
 	dev: 
