@@ -1,18 +1,33 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import data from "./data/data.js";
+
+import * as _ from "lodash";
 
 Vue.use( Vuex );
 
-// 	********************************************************
-// 	...
-// 	********************************************************
+///////////////////////////////////////////////////////////
+//  ...
+///////////////////////////////////////////////////////////
 
 module.exports = new Vuex.Store
 (
 	{ 
-		"state": { "foo" : "bar" },
-		// "state": data,
-		// "getters" : {}
+		"state": function()
+		{
+			return {
+				"home" 		: require("@modules/home/data/home.js"),
+			}
+		},
+		"getters" : 
+		{
+			///////////////////////////////////////////////////////
+		    //  Types
+		    ///////////////////////////////////////////////////////
+
+		    // Returns a type for a given id
+			// "getTypeForId" : (state,getters) => (id) => _.find( state.types, (t)=> t.id == id ),
+			
+		},
+		"mutations" : {}
 	}
 );

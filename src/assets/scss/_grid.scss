@@ -9,15 +9,10 @@
 //  #   Vars
 //  #######################################################
 
-
-$susy-container-width       : 960px;        // The width of the container
-$susy-num-columns           : 12;           // The number of columns in your grid
-$susy-gutter-size           : 20px;         // The size of gutters between columns
-
 $susy: (
-	container: $susy-container-width,
-	columns: $susy-num-columns,  
-	gutters: $susy-gutter-size / ( $susy-container-width / $susy-num-columns )
+	container: $grid-container-width,
+	columns: $grid-num-columns,  
+	gutters: $grid-gutter-size / ( $grid-container-width / $grid-num-columns )
 );
 
 //  #######################################################
@@ -31,7 +26,7 @@ $susy: (
 
 //  Create the columns
 
-@for $i from 1 through $susy-num-columns
+@for $i from 1 through $grid-num-columns
 {
     // Create each column
     .col-#{$i}
@@ -55,7 +50,7 @@ $susy: (
 {
     @include breakpoint( $value )
     {
-        @for $i from 1 through $susy-num-columns
+        @for $i from 1 through $grid-num-columns
         {
             .col-#{$key}-#{$i}
             {
@@ -66,4 +61,23 @@ $susy: (
             }
         }
     }
+}
+
+//  #######################################################
+//  #   Main
+//  #######################################################
+
+.container--fluid
+{
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.col--fluid
+{
+    width: 100%;   
 }
