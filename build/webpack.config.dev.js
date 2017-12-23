@@ -15,7 +15,7 @@ module.exports = merge( webpackBaseConfig,
 {
     entry: 
     [
-        "webpack-hot-middleware/client",
+        'webpack-hot-middleware/client?path=/__webpack_hmr&noInfo=true',
     ],
     module:
     {
