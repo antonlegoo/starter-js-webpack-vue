@@ -24,7 +24,7 @@ var compiler = webpack( webpackConfig );
 // Enable dev middleware
 app.use(require("webpack-dev-middleware")(compiler,
 {
-    noInfo: true, publicPath: "/"
+    noInfo: true, publicPath: "/", stats: { colors: true },
 }));
 
 // Enable hot-reloading
