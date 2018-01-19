@@ -9,8 +9,11 @@ var config = require( "./config.js" );
 //  
 //  *******************************************************
 
-// default port where dev server listens for incoming traffic
-var port = process.env.PORT || config.build.PORT;
+// define the port as either: 
+// 		the port assigned by the process
+// 		the port passed as an argument
+// 		the port defined in the config
+var port = process.env.PORT || process.argv[2] || config.build.PORT;
 
 // Init express
 var app = express();
