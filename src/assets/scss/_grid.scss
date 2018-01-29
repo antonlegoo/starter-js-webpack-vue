@@ -1,49 +1,71 @@
-//  #######################################################
+///////////////////////////////////////////////////////////
 //  #   _grid.scss
 //      The grid system used throughout the site
-//  #######################################################
+///////////////////////////////////////////////////////////
 
-@import "~susy/sass/susy";
-
-//  #######################################################
-//  #   Vars
-//  #######################################################
-
-$susy: (
-	container: $grid-container-width,
-	columns: $grid-num-columns,  
-	gutters: $grid-gutter-size / ( $grid-container-width / $grid-num-columns )
-);
-
-//  #######################################################
-//  #   Main
-//  #######################################################
+///////////////////////////////////////////////////////////
+//  #   Container
+///////////////////////////////////////////////////////////
 
 .container
 { 
-    @include container; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-width: $grid-container-width;
+    margin: 0 auto;
+
+    &.-center-v       { align-items: center; }
+    &.-center-h       { justify-content: center; }
 }
 
-//  Create the columns
+///////////////////////////////////////////////////////////
+//  #   Columns
+///////////////////////////////////////////////////////////
 
+.col
+{
+    width: 100%;
+    padding-left: $grid-gutter-size / 2;
+    padding-right: $grid-gutter-size / 2;
+}
+.col--half      { @extend .col; width: 50%; }
+.col--full      { @extend .col; width: 100%; }
+.col--third     { @extend .col; width: 33.3333333%; }
+
+///////////////////////////////////////////////////////////
+//  #   Offset Columns
+///////////////////////////////////////////////////////////
+
+// Create columns for grid
 @for $i from 1 through $grid-num-columns
 {
+    // Calc the percent for this col
+    $percent : percentage( (100 / ($grid-num-columns / $i) ) * 0.01 );
+
     // Create each column
     .col-#{$i}
     {
-        float: left;
-        width: span($i);
-        padding-left: gutter() / 2;
-        padding-right: gutter() / 2;
+        @extend .col;
+        width: $percent;
     }
 
     // Create each column offset
     .col-offset-#{$i}
     { 
-        margin-left: span($i);
+        margin-left: $percent;
     }
 }
 
+.col--offset-half      { @extend .col; margin-left: 50%; }
+.col--offset-full      { @extend .col; margin-left: 100%; }
+.col--offset-third     { @extend .col; margin-left: 33.3333333%; }
+
+
+///////////////////////////////////////////////////////////
+//  #  Breakpoint Columns
+///////////////////////////////////////////////////////////
 
 // Create responsive classes for each column
 @each $key, $value in $bp-classes
@@ -52,32 +74,15 @@ $susy: (
     {
         @for $i from 1 through $grid-num-columns
         {
+            // Calc the percent for this col
+            $percent : percentage( (100 / ($grid-num-columns / $i) ) * 0.01 );
+
             .col-#{$key}-#{$i}
             {
-                float: left;
-                width: span($i);
-                padding-left: gutter() / 2;
-                padding-right: gutter() / 2;
+                width: $percent;
+                padding-left: $grid-gutter-size / 2;
+                padding-right: $grid-gutter-size / 2;
             }
         }
     }
-}
-
-//  #######################################################
-//  #   Main
-//  #######################################################
-
-.container--fluid
-{
-    display: flex !important;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-
-.col--fluid
-{
-    width: 100%;   
 }
