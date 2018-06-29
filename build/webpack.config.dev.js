@@ -17,9 +17,10 @@ module.exports = merge( webpackBaseConfig,
     [
         'webpack-hot-middleware/client?path=/__webpack_hmr&noInfo=true',
     ],
+    mode : "development",
     module:
     {
-        loaders:
+        rules:
         [
             {
                 test: /\.scss$/, 

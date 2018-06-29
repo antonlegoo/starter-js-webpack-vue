@@ -15,9 +15,10 @@ var webpackBaseConfig = require('./webpack.config.base.js');
 module.exports = merge( webpackBaseConfig,
 {
     entry: [],
+    mode : "production",
     module:
     {
-        loaders:
+        rules:
         [
             {
                 test: /\.scss$/, 

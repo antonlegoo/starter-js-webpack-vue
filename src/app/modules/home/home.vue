@@ -50,8 +50,8 @@ export default
 {
     "components": 
     {
-        "main-header"   : require("@modules/shared/components/main-header.vue"),
-        "main-footer"   : require("@modules/shared/components/main-footer.vue"),
+        "main-header"   : require("@modules/shared/components/main-header.vue").default,
+        "main-footer"   : require("@modules/shared/components/main-footer.vue").default,
     },
 
     ///////////////////////////////////////////////////////
