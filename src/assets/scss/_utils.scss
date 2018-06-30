@@ -18,20 +18,51 @@ $pad-levels : 15;
 	.pad-#{$i}-bottom	{ padding-bottom: $size-pad * $i !important; }
 	.pad-#{$i}-left		{ padding-left: $size-pad * $i !important; }
 	.pad-#{$i}-right	{ padding-right: $size-pad * $i !important; }
+
+	// Breakpoint specific
+	@each $key, $value in $bp-classes
+	{
+	    @include breakpoint( $value )
+	    {
+	    	.pad-#{$i}-#{$key}			{ padding: $size-pad * $i !important; }
+			.pad-#{$i}-v-#{$key}			{ padding-top: $size-pad * $i !important; padding-bottom: $size-pad * $i !important; }
+			.pad-#{$i}-h-#{$key}			{ padding-left: $size-pad * $i !important; padding-right: $size-pad * $i !important; }
+			.pad-#{$i}-top-#{$key}		{ padding-top: $size-pad * $i !important; }
+			.pad-#{$i}-bottom-#{$key}	{ padding-bottom: $size-pad * $i !important; }
+			.pad-#{$i}-left-#{$key}		{ padding-left: $size-pad * $i !important; }
+			.pad-#{$i}-right-#{$key}		{ padding-right: $size-pad * $i !important; }
+	    }
+	}
 }
 
-.pad-h			{ padding: $size-pad * 0.5 !important; }
-.pad-h-v		{ padding-top: $size-pad * 0.5 !important; padding-bottom: $size-pad * 0.5 !important; }
-.pad-h-h		{ padding-left: $size-pad * 0.5 !important; padding-right: $size-pad * 0.5 !important; }
-.pad-h-top		{ padding-top: $size-pad * 0.5 !important; }
-.pad-h-bottom	{ padding-bottom: $size-pad * 0.5 !important; }
-.pad-h-left		{ padding-left: $size-pad * 0.5 !important; }
-.pad-h-right	{ padding-right: $size-pad * 0.5 !important; }
+// Half sizes
+.pad-h					{ padding: $size-pad * 0.5 !important; }
+.pad-h-v				{ padding-top: $size-pad * 0.5 !important; padding-bottom: $size-pad * 0.5 !important; }
+.pad-h-h				{ padding-left: $size-pad * 0.5 !important; padding-right: $size-pad * 0.5 !important; }
+.pad-h-top				{ padding-top: $size-pad * 0.5 !important; }
+.pad-h-bottom			{ padding-bottom: $size-pad * 0.5 !important; }
+.pad-h-left				{ padding-left: $size-pad * 0.5 !important; }
+.pad-h-right			{ padding-right: $size-pad * 0.5 !important; }
+
+// Breakpoint specific
+@each $key, $value in $bp-classes
+{
+    @include breakpoint( $value )
+    {
+    	.pad-h-#{$key}					{ padding: $size-pad * 0.5 !important; }
+		.pad-h-v-#{$key}				{ padding-top: $size-pad * 0.5 !important; padding-bottom: $size-pad * 0.5 !important; }
+		.pad-h-h-#{$key}				{ padding-left: $size-pad * 0.5 !important; padding-right: $size-pad * 0.5 !important; }
+		.pad-h-top-#{$key}				{ padding-top: $size-pad * 0.5 !important; }
+		.pad-h-bottom-#{$key}			{ padding-bottom: $size-pad * 0.5 !important; }
+		.pad-h-left-#{$key}				{ padding-left: $size-pad * 0.5 !important; }
+		.pad-h-right-#{$key}			{ padding-right: $size-pad * 0.5 !important; }
+    }
+}
+
 
 //  #######################################################
 //  #   Margin
 //  #######################################################
-
 
 @for $i from 0 through $pad-levels 
 {
@@ -42,8 +73,24 @@ $pad-levels : 15;
 	.margin-#{$i}-bottom	{ margin-bottom: $size-pad * $i !important; }
 	.margin-#{$i}-left		{ margin-left: $size-pad * $i !important; }
 	.margin-#{$i}-right		{ margin-right: $size-pad * $i !important; }
+
+	// Breakpoint specific
+	@each $key, $value in $bp-classes
+	{
+	    @include breakpoint( $value )
+	    {
+	    	.margin-#{$i}-#{$key}			{ margin: $size-pad * $i !important; }
+			.margin-#{$i}-v-#{$key}			{ margin-top: $size-pad * $i !important; margin-bottom: $size-pad * $i !important; }
+			.margin-#{$i}-h-#{$key}			{ margin-left: $size-pad * $i !important; margin-right: $size-pad * $i !important; }
+			.margin-#{$i}-top-#{$key}		{ margin-top: $size-pad * $i !important; }
+			.margin-#{$i}-bottom-#{$key}		{ margin-bottom: $size-pad * $i !important; }
+			.margin-#{$i}-left-#{$key}		{ margin-left: $size-pad * $i !important; }
+			.margin-#{$i}-right-#{$key}		{ margin-right: $size-pad * $i !important; }
+	    }
+	}
 }
 
+// Half sizes
 .margin-h					{ margin: $size-pad * 0.5 !important; }
 .margin-h-v					{ margin-top: $size-pad * 0.5 !important; margin-bottom: $size-pad * 0.5 !important; }
 .margin-h-h					{ margin-left: $size-pad * 0.5 !important; margin-right: $size-pad * 0.5 !important; }
@@ -51,7 +98,6 @@ $pad-levels : 15;
 .margin-h-bottom			{ margin-bottom: $size-pad * 0.5 !important; }
 .margin-h-left				{ margin-left: $size-pad * 0.5 !important; }
 .margin-h-right				{ margin-right: $size-pad * 0.5 !important; }
-
 
 
 //  #######################################################
