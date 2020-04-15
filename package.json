@@ -24,7 +24,7 @@
     "minireset.css": "0.0.3",
     "node-sass": "^4.5.2",
     "path": "^0.12.7",
-    "sass-loader": "",
+    "sass-loader": "7.3.1",
     "style-loader": "",
     "susy": "^2.2.12",
     "url-loader": "",

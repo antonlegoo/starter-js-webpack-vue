@@ -35,14 +35,14 @@ module.exports =
                 loader: 'style-loader!css-loader!sass-loader',
             },
             {
-                test: /\.(png|jpe?g|gif|svg|pdf)(\?.*)?$/,
+                test: /\.(png|jpe?g|gif|svg|pdf|mp4)(\?.*)?$/,
                 use : [
                     {
                         loader: 'url-loader',
                         options:
                         {
                             limit: 1,
-                            name: "images/[name].[ext]"
+                            name: (filename) => ( filename.indexOf("static_files") > -1 ) ? "files/[name].[ext]" : "images/[name].[ext]",
                         }
                     },
                 ]
@@ -59,8 +59,8 @@ module.exports =
             {
                 test: /\.vue?$/,
                 loader: 'vue-loader',
-            }
-        ]
+            },
+        ],
     },
     resolve:
     {

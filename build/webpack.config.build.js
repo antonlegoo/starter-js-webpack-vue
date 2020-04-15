@@ -4,8 +4,6 @@ var webpack = require( "webpack" );
 var merge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
-var config = require( "./config.js" );
 var webpackBaseConfig = require('./webpack.config.base.js');
 
 // ********************************************************
@@ -29,7 +27,7 @@ module.exports = merge( webpackBaseConfig,
                         { loader: 'css-loader' },
                         { 
                             loader: 'sass-loader',
-                            options: { includePaths: [ path.resolve( __dirname, "../src/assets/scss/" ) ] },
+                            options: { sassOptions: { includePaths: [ path.resolve( __dirname, "../src/assets/scss/" ) ] } },
                         },
                     ]
                 }),

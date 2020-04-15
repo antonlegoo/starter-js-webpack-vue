@@ -2,8 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.build.js');
 
-var config = require( "./config.js" );
-
 //  *******************************************************
 //  
 //  *******************************************************
