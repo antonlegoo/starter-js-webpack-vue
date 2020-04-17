@@ -1,4 +1,4 @@
-import page_home 	from "@modules/home/home.vue";
+import page_home 	from "@pages/home/home.vue";
 
 ///////////////////////////////////////////////////////////
 //  ...

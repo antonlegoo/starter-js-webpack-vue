@@ -69,10 +69,11 @@ module.exports =
         {
             vue: 'vue/dist/vue.common.js',
             "@root": path.resolve( __dirname, "../" ),
-             "@app": path.resolve( __dirname, "../src/app/" ),
-            "@modules": path.resolve( __dirname, "../src/app/modules/" ),
-            styles : path.resolve( __dirname, "../src/assets/scss/" ),
-            images : path.resolve( __dirname, "../src/assets/img/" ),
+            "@app": path.resolve( __dirname, "../src/app/" ),
+            "@pages": path.resolve( __dirname, "../src/app/pages/" ),
+            "@shared": path.resolve( __dirname, "../src/app/shared/" ),
+            "@styles" : path.resolve( __dirname, "../src/assets/scss/" ),
+            "@images" : path.resolve( __dirname, "../src/assets/img/" ),
         }
     },
     plugins:

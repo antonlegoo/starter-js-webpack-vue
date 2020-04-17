@@ -1,5 +1,15 @@
 <template>
-    <div class="">
+	<div class="home">
+		<main-header></main-header>
+
+		<div class="container pad-5-v">
+			<div class="col-9">
+				<h1 class="pad-1-bottom">{{home.title}}</h1>
+				<p class="" v-html="home.desc"></p>
+			</div>
+		</div>
+
+		<main-footer></main-footer>
 	</div>
 </template>
 
@@ -9,46 +19,64 @@
 
 export default
 {
-	"components": {},
+	"components": 
+	{
+		"main-header"   : require("@shared/components/main-header.vue").default,
+		"main-footer"   : require("@shared/components/main-footer.vue").default,
+	},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	//  Data
 	///////////////////////////////////////////////////////
 
 	data ()
 	{
-		return {}
+		return { "home": this.$store.state.home };
 	},
+
 	"props" : [""],
+
 	"watch" : {},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	//  Lifecycle
 	///////////////////////////////////////////////////////
 
-	"mounted": function(){},
-	"destroyed": function(){},
+	mounted ()
+	{
+		// 
+	},
+
+	// destroyed (){},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	//  Functional
 	///////////////////////////////////////////////////////
 
-	"methods" : {},
-	"computed" : {},
+	"methods" : 
+	{
+		//
+	},
+
+	"computed" : 
+	{
+		//
+	},
 }
 </script>
 
 ***********************************************************
 
 <style lang="scss" scoped>
-@import "~styles/_vars.scss";
+@import "@styles/_vars.scss";
 
 ///////////////////////////////////////////////////////////
-// 	...
+// 	Component-scoped SASS styles
 ///////////////////////////////////////////////////////////
 
-.template
-{}
-
+.home
+{
+	//
+}
 
 </style>

@@ -1,10 +1,5 @@
 <template>
-    <div class="container">
-    	<div class="col-6">
-	    	<small>Header</small>
-	    </div>
-	    <div class="col-6">
-	    </div>
+	<div class="template">
 	</div>
 </template>
 
@@ -14,42 +9,60 @@
 
 export default
 {
-	"components": {},
+	"components": 
+	{
+		// "template"	: require("@pages/home/components/template.vue").default,
+	},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	// 	Data
 	///////////////////////////////////////////////////////
 
 	data ()
 	{
-		return {}
+		return {
+			//
+		}
 	},
+
 	"props" : [""],
+
 	"watch" : {},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	// 	Lifecycle
 	///////////////////////////////////////////////////////
 
-	"mounted": function(){},
-	"destroyed": function(){},
+	mounted ()
+	{
+		// 
+	},
+
+	// destroyed (){},
 
 	///////////////////////////////////////////////////////
-	// 	...
+	//  Functional
 	///////////////////////////////////////////////////////
 
-	"methods" : {},
-	"computed" : {},
+	"methods" : 
+	{
+		//
+	},
+
+	"computed" : 
+	{
+		//
+	},
 }
 </script>
 
 ***********************************************************
 
 <style lang="scss" scoped>
-@import "~styles/_vars.scss";
+@import "@styles/_vars.scss";
 
 ///////////////////////////////////////////////////////////
-// 	...
+// 	Component-scoped SASS styles
 ///////////////////////////////////////////////////////////
 
 .template

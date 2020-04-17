@@ -1,15 +1,5 @@
 <template>
-	<div class="home">
-		<main-header></main-header>
-
-		<div class="container pad-5-v">
-			<div class="col-9">
-				<h1 class="pad-1-bottom">{{home.title}}</h1>
-				<p class="" v-html="home.desc"></p>
-			</div>
-		</div>
-
-		<main-footer></main-footer>
+	<div class="template">
 	</div>
 </template>
 
@@ -21,17 +11,18 @@ export default
 {
 	"components": 
 	{
-		"main-header"   : require("@modules/shared/components/main-header.vue").default,
-		"main-footer"   : require("@modules/shared/components/main-footer.vue").default,
+		// "template"	: require("@shared/components/template.vue").default,
 	},
 
 	///////////////////////////////////////////////////////
-	//  Data
+	// 	Data
 	///////////////////////////////////////////////////////
 
 	data ()
 	{
-		return { "home": this.$store.state.home };
+		return {
+			//
+		}
 	},
 
 	"props" : [""],
@@ -39,7 +30,7 @@ export default
 	"watch" : {},
 
 	///////////////////////////////////////////////////////
-	//  Lifecycle
+	// 	Lifecycle
 	///////////////////////////////////////////////////////
 
 	mounted ()
@@ -68,15 +59,14 @@ export default
 ***********************************************************
 
 <style lang="scss" scoped>
-@import "~styles/_vars.scss";
+@import "@styles/_vars.scss";
 
 ///////////////////////////////////////////////////////////
 // 	Component-scoped SASS styles
 ///////////////////////////////////////////////////////////
 
-.home
-{
-	//
-}
+.template
+{}
+
 
 </style>

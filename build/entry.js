@@ -11,7 +11,7 @@ if (module.hot) module.hot.accept();
 // window._ = require( "underscore" );
 
 // Import the app
-require( "../src/app/main.js" );
+require( "../src/app/app.js" );
 
 // Import main SASS
 require( "../src/assets/scss/index.scss" );

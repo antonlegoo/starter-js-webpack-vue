@@ -1,5 +1,6 @@
 <template>
-	<div class="template">
+	<div class="container">
+		<small>Footer</small>
 	</div>
 </template>
 
@@ -11,7 +12,7 @@ export default
 {
 	"components": 
 	{
-		// "template"	: require("@modules/shared/components/template.vue").default,
+		// "template"	: require("@shared/components/template.vue").default,
 	},
 
 	///////////////////////////////////////////////////////
@@ -59,7 +60,7 @@ export default
 ***********************************************************
 
 <style lang="scss" scoped>
-@import "~styles/_vars.scss";
+@import "@styles/_vars.scss";
 
 ///////////////////////////////////////////////////////////
 // 	Component-scoped SASS styles

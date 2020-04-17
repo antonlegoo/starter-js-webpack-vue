@@ -9,12 +9,9 @@
 //  #   Paths
 //  #######################################################
 
-$path-images                     	: "~images/";
+$path-images                     	: "@images/";
 $path-img                     		: $path-images;
-$path-image-dir                     : $path-images;
 $path-fonts 						: "../fonts/";
-$fa-font-path 						: $path-fonts;
-$icon-font-path 					: $path-fonts;
 
 //	#######################################################
 //	# Generic Colors

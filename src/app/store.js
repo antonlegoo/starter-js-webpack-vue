@@ -15,7 +15,7 @@ module.exports = new Vuex.Store
 		state ()
 		{
 			return {
-				"home" 		: require("@modules/home/data/home.js"),
+				"home" 		: require("@pages/home/data/home.js"),
 			}
 		},
 

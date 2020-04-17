@@ -9,7 +9,7 @@ Vue.use( VueRouter );
 
 // Gather routes from modules
 let routes = [];
-routes = routes.concat( require("@modules/home/routes.js") );
+routes = routes.concat( require("@pages/home/routes.js") );
 
 // Create router instance
 let router = new VueRouter( { 	"routes" : routes,
