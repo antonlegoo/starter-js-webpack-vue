@@ -19,8 +19,5 @@ require( "../src/assets/scss/index.scss" );
 // Import all images
 require.context( "../src/assets/img/", true, /\.(png|jpe?g|gif|svg)(\?.*)?$/ );
 
-// Import all videos
-require.context( "../src/assets/videos/", true, /\.(mp4)(\?.*)?$/ );
-
 // Import all static files
-require.context( "../src/assets/static_files/", true, /\.(png|jpe?g|gif|svg|ppt|pdf|zip|ppt|pptx)(\?.*)?$/ );
+require.context( "../src/assets/static_files/", true, /\.(png|jpe?g|gif|svg|ppt|pdf|zip|ppt|pptx|mp4|mov)(\?.*)?$/ );

@@ -157,26 +157,8 @@ $pad-levels : 15;
 }
 
 //  #######################################################
-//  #   Images
-//  #######################################################
-
-.h-image-fit-container
-{
-	max-width: 100%;
-}
-
-//  #######################################################
 //  #   Mixins
 //  #######################################################
-
-// Handles browser prefixes for transform
-@mixin transform( $rule )
-{
-	transform: $rule;
-	-webkit-transform: $rule;
-	-moz-transform: $rule;
-	-ms-transform: $rule;
-}
 
 // Prints all CSS rules from a map
 @mixin print($map)

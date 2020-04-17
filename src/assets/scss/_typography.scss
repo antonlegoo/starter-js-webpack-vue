@@ -19,13 +19,6 @@
 	font-smoothing: antialiased;
 }
 
-body
-{
-	color: $color-text;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-}
-
 //  #######################################################
 //  #   Headings
 //  #######################################################
@@ -40,6 +33,7 @@ h6, .h6
 	font-family: $font-family-heading;
 	color: $color-headings;
 	font-weight: bold;
+	letter-spacing: $font-heading-letter-spacing;
 
 	& a
     { 
@@ -51,9 +45,7 @@ h6, .h6
 h1, .h1,
 h2, .h2,
 h3, .h3
-{
-	letter-spacing: $font-heading-letter-spacing;
-}
+{}
 
 h4, .h4,
 h5, .h5,
@@ -97,7 +89,6 @@ h6, .h6
 
 .lead
 {
-    font-size: 32px;
+    font-size: $font-size-large;
     line-height: 1.15em;
-    color: $color-gray-darker;
 }

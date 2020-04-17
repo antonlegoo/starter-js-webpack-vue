@@ -29,6 +29,7 @@
     "susy": "^2.2.12",
     "url-loader": "",
     "vue": "^2.2.6",
+    "vue-head": "^2.2.0",
     "vue-loader": "",
     "vue-router": "^2.7.0",
     "vue-style-loader": "^4.1.0",

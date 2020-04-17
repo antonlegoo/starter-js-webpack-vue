@@ -16,8 +16,14 @@
     max-width: $grid-container-width;
     margin: 0 auto;
 
-    &.-center-v       { align-items: center; }
-    &.-center-h       { justify-content: center; }
+    &.-fluid            { max-width: unset; }
+    &.-nowrap           { flex-wrap: nowrap; }
+
+    &.-center-v         { align-items: center; }
+    &.-center-h         { justify-content: center; }
+
+    &.-align-left       { justify-content: flex-start; }
+    &.-align-right      { justify-content: flex-end; }
 }
 
 ///////////////////////////////////////////////////////////

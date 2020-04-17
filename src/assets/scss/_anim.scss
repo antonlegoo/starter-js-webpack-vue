@@ -1,0 +1,41 @@
+//  #######################################################
+//  #   Crossfade (vue-transition)
+//  #######################################################
+
+.app-view
+{
+	transition: opacity 0.5s ease-out;
+}
+
+.crossfade-enter { opacity: 0; }
+.crossfade-enter-active { opacity: 0; }
+.crossfade-enter-to {}
+
+.crossfade-leave { opacity: 1; }
+.crossfade-leave-active { opacity: 0; }
+.crossfade-leave-to {}
+
+
+
+//  #######################################################
+//  #   Flip (vue-transition)
+//  #######################################################
+
+$easeInBack: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeOutBack: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$time: 0.6s;
+
+.flip-enter-active
+{
+	transition: transform $time $easeOutBack;
+}
+
+.flip-leave-active
+{
+	transition: transform $time $easeInBack;
+}
+
+.flip-enter, .flip-leave-to
+{
+	transform: rotateY(90deg);
+}
