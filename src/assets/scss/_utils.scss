@@ -111,6 +111,9 @@ $pad-levels : 15;
 .h-pos-fixed			{ position: fixed !important; }
 
 .hidden					{ display: none !important; }
+.hidden-mobile			{ @include breakpoint( $bp-mobile ) { display: none !important; } }
+.hidden-tablet			{ @include breakpoint( $bp-tablet ) { display: none !important; } }
+.hidden-desktop			{ @include breakpoint( $bp-desktop ) { display: none !important; } }
 
 //  #######################################################
 //  #   Text
@@ -119,10 +122,10 @@ $pad-levels : 15;
 .h-font-heading { font-family: $font-family-heading; }
 .h-font-serif  	{ font-family: $font-family-serif; }
 
-.h-text-muted  	{ color: $color-text-muted; }
-
-.h-text-small  	{ font-size: $font-size-small; }
-.h-font-size-small { font-size: $font-size-small !important; }
+.h-text-small  		{ font-size: $font-size-small; }
+.h-text-xsmall  	{ font-size: $font-size-xsmall; }
+.h-font-size-small 	{ font-size: $font-size-small !important; }
+.h-font-size-xsmall { font-size: $font-size-xsmall !important; }
 
 .h-text-left 	{ text-align: left; }
 .h-text-center 	{ text-align: center; }
@@ -144,7 +147,9 @@ $pad-levels : 15;
 .h-color-secondary 	{ color: $color-secondary; }
 .h-color-headings	{ color: $color-headings; }
 .h-color-text 		{ color: $color-text; }
-.h-color-white 		{ color: white !important; }
+.h-text-muted  		{ color: $color-text-muted; }
+.h-color-text-muted	{ color: $color-text-muted; }
+
 
 .h-text-truncate
 {

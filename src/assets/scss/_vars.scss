@@ -9,7 +9,7 @@
 //  #   Paths
 //  #######################################################
 
-$path-images                     	: "@images/";
+$path-images                     	: "/images";
 $path-img                     		: $path-images;
 $path-fonts 						: "../fonts/";
 
@@ -53,6 +53,7 @@ $color-headings 					: #000;
 $font-size-base 					: 16px;
 $font-size-large					: 20px;
 $font-size-small					: 12px;
+$font-size-xsmall					: 10px;
 
 
 $font-size-h1						: 2.8rem;
