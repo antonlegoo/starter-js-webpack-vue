@@ -1,3 +1,8 @@
+///////////////////////////////////////////////////////////
+// 	Purpose:
+//	Compresses image files in the build folder
+///////////////////////////////////////////////////////////
+
 const path = require("path");
 const fs = require("fs");
 
@@ -20,7 +25,7 @@ let fileTypes = "jpg,png,gif,svg";
 // The dir to put the compressed files
 let outputPath = path.resolve( CONFIG.build.OUTPUT_DIR, "images" );
 // The file to keep track of what has been previously compressed
-let historyFilePath = "./build/image-compress-history.txt";
+let historyFilePath = path.resolve( __dirname, "image-compress-history.json" );
 
 ///////////////////////////////////////////////////////////
 // 	Functions
@@ -122,20 +127,30 @@ let compressFiles = ( files ) =>
 // 	Run
 ///////////////////////////////////////////////////////////
 
+// 	The script below tries to reduce the amount of files to 
+//	compress by looking at the source images in comparison to 
+//	to the build output folder.
 
 // create an array of [file_name, date_modified] from src images
 let sourceFiles = getFilesFromDirectory( CONFIG.build.IMAGES_DIR );
 // create an array of [file_name, date_modified] from history
 let filesHistory = JSON.parse( readFileToString( historyFilePath ) );
-
+// the array of files to actually compress
 let filesToCompress = [];
 
-// If no history, then compress everything
-if( !filesHistory ) 
+// If no source files, then compress everything in the build folder
+if( !sourceFiles || sourceFiles.length == 0 )
 {
-	console.log( `Found ${sourceFiles.length} new files...` );
+	filesToCompress = getFilesFromDirectory( path.resolve( CONFIG.build.OUTPUT_DIR, "images" ) );
+	console.log( `No source files found. Found ${filesToCompress.length} files from build dir.` );
+}
+// If no history, then compress everything in source
+else if( !filesHistory ) 
+{
+	console.log( `Found ${sourceFiles.length} new files.` );
 	filesToCompress = sourceFiles;
 }
+// If history and source, compress new and modified files
 else
 {
 	// Get files not found in the history
@@ -149,7 +164,7 @@ else
 		}); 
 	});
 
-	console.log( `Found ${newFiles.length} new files and ${modFiles.length} modified files...` );
+	console.log( `Found ${newFiles.length} new files and ${modFiles.length} modified files.` );
 
 	// Combine
 	filesToCompress = newFiles.concat( modFiles );
@@ -160,5 +175,5 @@ let files = _.map( filesToCompress, s => s[0] );
 compressFiles(files).then( () => 
 {
 	// Write history
-	writeStringToFile( JSON.stringify(sourceFiles), historyFilePath);
+	writeStringToFile( JSON.stringify(filesToCompress), historyFilePath);
 });
