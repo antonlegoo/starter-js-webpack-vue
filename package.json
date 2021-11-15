@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vueuse/head": "^0.6.0",
     "breakpoint-sass": "2.7.1",
     "css-loader": "6.5.1",
     "file-loader": "6.2.0",
@@ -24,7 +25,6 @@
     "style-loader": "3.3.1",
     "url-loader": "4.1.1",
     "vue": "3.2.22",
-    "vue-head": "2.2.0",
     "vue-loader": "16.8.3",
     "vue-router": "4.0.12",
     "vue-style-loader": "4.1.3",

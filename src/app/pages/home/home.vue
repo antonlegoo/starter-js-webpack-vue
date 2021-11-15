@@ -47,7 +47,7 @@ export default
 		// 
 	},
 
-	// destroyed (){},
+	// unmounted (){},
 
 	///////////////////////////////////////////////////////
 	//  Functional
