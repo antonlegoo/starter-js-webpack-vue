@@ -1,15 +1,13 @@
-import Vue from 'vue'
-Vue.config.productionTip = false
+import { createApp } from 'vue' 
 
-import VueHead from 'vue-head';
-Vue.use( VueHead );
+// import VueHead from 'vue-head';
+// Vue.use( VueHead );
 
 import { router } from "./router.js";
 import { store } from "./store.js";
 
-new Vue(
-{
-	router,
-	store
-}
-).$mount("#app");
+const app = createApp( {} );
+app.use( router );
+app.use( store );
+
+app.mount("#app");

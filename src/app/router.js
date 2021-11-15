@@ -1,19 +1,18 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 ///////////////////////////////////////////////////////////
 //  ...
 ///////////////////////////////////////////////////////////
-
-Vue.use( VueRouter );
 
 // Gather routes from pages
 let routes = [];
 routes = routes.concat( require("@pages/home/routes.js").routes );
 
 // Create router instance
-let router = new VueRouter( { 	// Register all routes 
+let router = createRouter( { 	// Register all routes 
 								"routes" : routes,
+
+								"history" : createWebHashHistory(),
 
 								// set scroll position to top of page after each route navigation
 								scrollBehavior (to, from, savedPosition) { return { x: 0, y: 0 } },

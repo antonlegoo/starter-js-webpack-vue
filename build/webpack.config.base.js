@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 var config = require( "./config.js" );
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 // ********************************************************
 //
@@ -67,7 +67,7 @@ module.exports =
         modules: ["node_modules"],
         alias : 
         {
-            vue: 'vue/dist/vue.common.js',
+            vue: 'vue/dist/vue.esm-bundler.js',
             "@root": path.resolve( __dirname, "../" ),
             "@app": path.resolve( __dirname, "../src/app/" ),
             "@pages": path.resolve( __dirname, "../src/app/pages/" ),
@@ -85,5 +85,9 @@ module.exports =
             template: 'src/index.html'
         }),
         new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+          __VUE_OPTIONS_API__: true,
+          __VUE_PROD_DEVTOOLS__: false
+        }),
     ]
 };
