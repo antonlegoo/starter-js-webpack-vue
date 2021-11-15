@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vueuse/head": "^0.6.0",
+    "@vueuse/head": "0.6.0",
     "breakpoint-sass": "2.7.1",
     "css-loader": "6.5.1",
     "file-loader": "6.2.0",
@@ -36,11 +36,11 @@
     "webpack-merge": "5.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.0",
     "babel-loader": "8.2.3",
-    "express": "^4.17.1",
-    "mini-css-extract-plugin": "^2.4.4"
+    "express": "4.17.1",
+    "mini-css-extract-plugin": "2.4.4"
   },
   "babel": {
     "presets": [
