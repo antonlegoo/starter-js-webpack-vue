@@ -2,7 +2,8 @@
 var path = require( "path" );
 var webpack = require( "webpack" );
 const { merge } = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 
 var webpackBaseConfig = require('./webpack.config.base.js');
 
@@ -20,23 +21,13 @@ module.exports = merge( webpackBaseConfig,
         [
             {
                 test: /\.scss$/, 
-                use: ExtractTextPlugin.extract(
-                {
-                    fallback: "style-loader",
-                    use: [
-                        { loader: 'css-loader' },
-                        { 
-                            loader: 'sass-loader',
-                            options: { sassOptions: { includePaths: [ path.resolve( __dirname, "../src/assets/scss/" ) ] } },
-                        },
-                    ]
-                }),
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
         ]
     },
     plugins:
     [
-        new ExtractTextPlugin( "styles.css" ),
+        new MiniCssExtractPlugin( {filename: 'style.css'} ),
     ]
 }
 );

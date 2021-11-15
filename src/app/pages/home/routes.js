@@ -4,7 +4,7 @@ import page_home 	from "@pages/home/home.vue";
 //  ...
 ///////////////////////////////////////////////////////////
 
-const routes = 
+export const routes = 
 [
 	{ "path" : "/", "component" : page_home },
 	// { "path" : "/other/:id", "component" : other, "props": true },
@@ -13,5 +13,3 @@ const routes =
 ///////////////////////////////////////////////////////////
 //  ...
 ///////////////////////////////////////////////////////////
-
-module.exports = routes;
